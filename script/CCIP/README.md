@@ -4,7 +4,8 @@ In our EthGlobal Hackathon entry, we present a cutting-edge application of Chain
 
 Transaction on Avalanche to request BNM token from Base and Optimism and run automation on Avalanche upon receive.[]
 
-<img width="1110" alt="image" src="https://github.com/dittonetwork/ethglobal-hackathon-chainlink-ccip-automation/assets/121140761/75827ab7-e809-4e33-a3eb-85851ed89313">
+<img width="1095" alt="image" src="https://github.com/dittonetwork/ethglobal-hackathon-interchain/assets/121140761/04a19fe6-3f5b-4850-91e9-615af16ace87">
+
 
 
 1. **Initial State and Script Flow:**
@@ -29,7 +30,8 @@ Transaction on Avalanche to request BNM token from Base and Optimism and run aut
     - The vault is checked to ensure that the balance of BNM tokens is sufficient, indicating that both transfers from Network 2 and 3 have been completed successfully.
 10. **Action and Event Emission:**
     - An event is emitted as an action, to signal the successful completion of the token transfers and the automation process.
-
+11. **Cancel of the Automation:**
+    - The automation is being automatically stopped (single execution).
 ---
 
 ## Running the Project
