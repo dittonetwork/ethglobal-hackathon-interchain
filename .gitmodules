@@ -1,0 +1,3 @@
+[submodule "CCIP/lib/forge-std"]
+	path = CCIP/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
