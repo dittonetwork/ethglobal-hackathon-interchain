@@ -11,7 +11,7 @@ Transaction on Avalanche to request BNM token from Base and Optimism and run aut
 1. **Initial State and Script Flow:**
     - The owner starts with a native currency on Network 1, 2, and 3. The script's function is to deploy vaults across all three networks and deposit BNM tokens on Networks 2 and 3. It packages bridge operations and a catch operation into a multicall, which is then called on the vault on Network 1.
 2. **Cross-Chain Token Bridge Request:**
-    - The **`sendTokenRequest`** function sends a cross-chain message to request tokens from two different networks: 2 and 3. We estimate fees and pay for execution with native currency of Network 1.
+    - The **`sendTokenRequest`** function sends a cross-chain message to request tokens from two different networks: 2 and 3. We estimate fees and pay for execution on Network 1.
 3. **Automation Creation:**
     - A stateful automation is created within the vault storage, complete with a unique key to run the automation.
 4. **Register Automation Service:**
