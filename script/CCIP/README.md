@@ -78,7 +78,7 @@ Follow these steps to set up and run the project. Ensure you have the necessary 
      - [Fuji Faucet](https://faucets.chain.link/fuji)
 
 5. **Executing the Main Script**:
-   - To run the "fetch, collect, and execute" script:
+   - To run the "fetch, collect, and execute" script (please update the address of the deployed diamond vault in the script):
      ```
      forge script script/CCIP/MainScript.s.sol -vvvv --rpc-url $FUJI_RPC_URL --with-gas-price 25000000000 --broadcast
      ```

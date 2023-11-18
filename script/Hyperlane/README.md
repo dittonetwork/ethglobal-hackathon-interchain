@@ -76,7 +76,7 @@ Follow these steps to set up and run the project. Ensure you have the necessary 
    - Ensure each vault has enough tokens for operations.
 
 5. **Executing the Main Script**:
-   - To run the "fetch, collect, and execute" script:
+   - To run the "fetch, collect, and execute" script (please update the address of the deployed diamond vault in the script):
      ```
      forge script script/Hyperlane/MainScript.s.sol -vvvv --rpc-url $AVAX_RPC_URL --with-gas-price 25000000000 --broadcast
      ```

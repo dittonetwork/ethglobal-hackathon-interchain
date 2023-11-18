@@ -10,7 +10,7 @@ import {IDiamondCut} from "../../src/Diamond/interfaces/IDiamondCut.sol";
 import "forge-std/Script.sol";
 
 contract CCIPTest is Script {
-    address diamond = 0xF25907327E9E4144291D43024b720Bc32055cda0;
+    address diamond = 0xF25907327E9E4144291D43024b720Bc32055cda0; // please insert the diamond address from the log trace after deployment of DeployerFuji/Mumbai/Opgoe (it is the same)
 
     address routerAvax = 0x554472a2720E5E7D5D3C817529aBA05EEd5F82D8;
 
