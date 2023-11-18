@@ -1,4 +1,4 @@
-# Ditto: Pioneering Account Abstraction for a Unified Web3 Experience
+# Ditto: Pioneering Smart Account for a Unified Web3 Experience
 
 ## Narrative
 
