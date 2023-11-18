@@ -4,7 +4,8 @@ In our EthGlobal Hackathon entry, we present a cutting-edge application of Hyper
 
 Transaction on Avalanche to request USDC token from Optimism and WETH from PolygonZkEVM and run automation on Avalanche upon receive.[]
 
-<img width="1095" alt="image" src="https://github.com/dittonetwork/ethglobal-hackathon-interchain/assets/121140761/04a19fe6-3f5b-4850-91e9-615af16ace87">
+<img width="1102" alt="image" src="https://github.com/dittonetwork/ethglobal-hackathon-interchain/assets/121140761/ab208373-8860-46bd-92fb-a46d559487d6">
+
 
 
 
