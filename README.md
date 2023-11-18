@@ -28,4 +28,4 @@ Join us in celebrating this milestone as we say "Hello" to the interchain era. E
 
 Please check out the script/CCIP and script/Hyperlane for running the showcase
 
-We are using CCIP & Hyperlane to establish a communication lane between our smart account contracts cross-chain. 
+We are using CCIP & Hyperlane to establish a communication lane between our smart account contracts cross-chain. We can collect funds from different chain and execute any actions with them automatically. In addition, we also support notifications via our extension on Metamask Snaps.
