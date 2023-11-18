@@ -2,7 +2,7 @@
 
 In our EthGlobal Hackathon entry, we present a cutting-edge application of Chainlink's Cross-Chain Interoperability Protocol (CCIP), combined with sophisticated automation services. This project is designed to demonstrate seamless operational flow across diverse blockchain networks, harnessing the strength of Chainlink's infrastructure. Our demonstration focuses on an innovative concept: "Fetch and Process". This involves retrieving assets from smart contract account vaults located on various networks and then employing automation services to effectively manage the incoming funds.
 
-
+Transaction on Avalanche to request BNM token from Base and Optimism and run automation on Avalanche upon receive.[]
 
 <img width="1110" alt="image" src="https://github.com/dittonetwork/ethglobal-hackathon-chainlink-ccip-automation/assets/121140761/75827ab7-e809-4e33-a3eb-85851ed89313">
 
