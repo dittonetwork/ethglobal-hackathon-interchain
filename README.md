@@ -4,7 +4,7 @@
 
 We are using CCIP & Hyperlane to establish a communication lane between our smart account contracts cross-chain. Within one user initiated transaction it is possible to collect funds from different chains and execute actions with them automatically. 
 
-**Please check out the script/CCIP and script/Hyperlane for running the showcase.**
+**Please check out the [script/CCIP](https://github.com/dittonetwork/ethglobal-hackathon-interchain/tree/main/script/CCIP) and [script/Hyperlane](https://github.com/dittonetwork/ethglobal-hackathon-interchain/tree/main/script/Hyperlane) for running the showcase.**
 In addition, we also support multichain overview and notifications via our extension on Metamask Snaps. Please explore other parts of the project:
 [Snap Installation Service](https://github.com/dittonetwork/ethglobal-hackathon-frontend), [Metamask Snap](https://github.com/dittonetwork/ethglobal-hackathon-notifications-snap), [Fetching Service](https://github.com/dittonetwork/ethglobal-hackathon-backend)
 
