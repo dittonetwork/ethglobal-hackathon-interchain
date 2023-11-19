@@ -49,6 +49,7 @@ Follow these steps to set up and run the project. Ensure you have the necessary 
 1. **Install Dependencies**:
    ```bash
    forge install
+   sh submodules.sh
    ```
 
 2. **Environment Configuration**:
@@ -84,7 +85,8 @@ Follow these steps to set up and run the project. Ensure you have the necessary 
 ### Monitoring Progress
 
 - **Gelato Automation Explorer**:
-  - Track the progress of the "balance checker" automation on the [Gelato Automation Explorer for Avalanche](https://app.gelato.network/).
+  - Track the progress of the "balance checker" automation on the [Gelato Automation Explorer for Avalanche](https://app.gelato.network/): 
+  - https://app.gelato.network/task/"insert ur gelato task id"?chainId=43114
 
 - **Hyperlink Explorer**:
   - View cross-chain communication and transactions on the [Hyperlane Explorer](https://explorer.hyperlane.xyz/).

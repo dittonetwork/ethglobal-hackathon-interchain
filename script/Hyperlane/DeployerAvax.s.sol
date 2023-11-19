@@ -6,7 +6,7 @@ import {DiamondCutFacet} from "../../src/Diamond/facets/DiamondCutFacet.sol";
 import {MulticallFacet} from "../../src/Diamond/facets/MulticallFacet.sol";
 import {OwnershipFacet} from "../../src/Diamond/facets/OwnershipFacet.sol";
 import {HyperlaneMessanger} from "../../src/Diamond/hyperlane/HyperlaneMessanger.sol";
-import {CelerCircleBridgeLogic} from "../../src/Diamond/Celer/CelerCircleBridge.sol";
+import {CelerCircleBridge} from "../../src/Diamond/Celer/CelerCircleBridge.sol";
 import {GelatoAutomateBalanceChecker} from "../../src/Diamond/gelatoAutomations/GelatoAutomateBalanceChecker.sol";
 
 import {IDiamondCut} from "../../src/Diamond/interfaces/IDiamondCut.sol";
@@ -36,10 +36,7 @@ contract HyperlaneTest is Script {
         HyperlaneMessanger hyperlaneMessanger = new HyperlaneMessanger(
             avaxMailbox
         );
-        CelerCircleBridgeLogic celer = new CelerCircleBridgeLogic(
-            celerCCTP,
-            avaxUSDC
-        );
+        CelerCircleBridge celer = new CelerCircleBridge(celerCCTP, avaxUSDC);
         GelatoAutomateBalanceChecker gelatoAutomateBalanceChecker = new GelatoAutomateBalanceChecker(
                 avaxGelatoAutomate,
                 avaxGelato
@@ -62,15 +59,18 @@ contract HyperlaneTest is Script {
         facetCut[2].facetAddress = address(celer);
         facetCut[2].action = IDiamondCut.FacetCutAction.Add;
         facetCut[2].functionSelectors = new bytes4[](1);
-        facetCut[2].functionSelectors[0] = CelerCircleBridgeLogic
+        facetCut[2].functionSelectors[0] = CelerCircleBridge
             .sendCelerCircleMessage
             .selector;
 
         facetCut[3].facetAddress = address(hyperlaneMessanger);
         facetCut[3].action = IDiamondCut.FacetCutAction.Add;
-        facetCut[3].functionSelectors = new bytes4[](2);
+        facetCut[3].functionSelectors = new bytes4[](3);
         facetCut[3].functionSelectors[0] = HyperlaneMessanger.dispatch.selector;
         facetCut[3].functionSelectors[1] = HyperlaneMessanger.handle.selector;
+        facetCut[3].functionSelectors[2] = HyperlaneMessanger
+            .interchainSecurityModule
+            .selector;
 
         facetCut[4].facetAddress = address(gelatoAutomateBalanceChecker);
         facetCut[4].action = IDiamondCut.FacetCutAction.Add;

@@ -1,2 +1,6 @@
 .env
 .DS*
+cache
+out
+broadcast
+lib

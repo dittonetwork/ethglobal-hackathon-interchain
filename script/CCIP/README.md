@@ -48,6 +48,7 @@ Follow these steps to set up and run the project. Ensure you have the necessary 
 1. **Install Dependencies**:
    ```bash
    forge install
+   sh submodules.sh
    ```
 
 2. **Environment Configuration**:

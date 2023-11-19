@@ -48,7 +48,7 @@ contract HyperlaneMessanger is BaseContract {
             messageBody
         );
 
-        require(fee >= address(this).balance, "not enough native for fees");
+        require(fee <= address(this).balance, "not enough native for fees");
 
         mailbox.dispatch{value: fee}(
             destinationDomain,
@@ -68,5 +68,9 @@ contract HyperlaneMessanger is BaseContract {
         // self call
         (bool success, ) = address(this).call(message);
         require(success);
+    }
+
+    function interchainSecurityModule() external pure returns (address) {
+        return address(0);
     }
 }

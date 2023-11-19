@@ -14,7 +14,7 @@ interface ICelerCircleBridge {
     ) external;
 }
 
-contract CelerCircleBridgeLogic is BaseContract {
+contract CelerCircleBridge is BaseContract {
     using Utils for address;
 
     ICelerCircleBridge private immutable celerCircleProxy;

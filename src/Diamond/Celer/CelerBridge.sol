@@ -15,7 +15,7 @@ interface IBridge {
     ) external payable;
 }
 
-contract CelerCircleBridgeLogic is BaseContract {
+contract CelerBridge is BaseContract {
     using Utils for address;
 
     IBridge private immutable bridge;
@@ -26,14 +26,15 @@ contract CelerCircleBridgeLogic is BaseContract {
 
     function sendCelerMessage(
         uint64 dstChainId,
-        uint256 exactAmount
+        uint256 exactAmount,
+        uint64 nonce
     ) external onlyOwnerOrDiamondItself {
         bridge.sendNative{value: exactAmount}(
             address(this),
             exactAmount,
             dstChainId,
-            1,
-            100000
+            nonce,
+            100000 // 10% slippage
         );
     }
 }

@@ -6,7 +6,7 @@ import {DiamondCutFacet} from "../../src/Diamond/facets/DiamondCutFacet.sol";
 import {MulticallFacet} from "../../src/Diamond/facets/MulticallFacet.sol";
 import {OwnershipFacet} from "../../src/Diamond/facets/OwnershipFacet.sol";
 import {HyperlaneMessanger} from "../../src/Diamond/hyperlane/HyperlaneMessanger.sol";
-import {CelerCircleBridgeLogic} from "../../src/Diamond/Celer/CelerCircleBridge.sol";
+import {CelerCircleBridge} from "../../src/Diamond/Celer/CelerCircleBridge.sol";
 
 import {IDiamondCut} from "../../src/Diamond/interfaces/IDiamondCut.sol";
 
@@ -35,12 +35,9 @@ contract HyperlaneTest is Script {
         HyperlaneMessanger hyperlaneMessanger = new HyperlaneMessanger(
             opMailbox
         );
-        CelerCircleBridgeLogic celer = new CelerCircleBridgeLogic(
-            celerCCTP,
-            opUSDC
-        );
+        CelerCircleBridge celer = new CelerCircleBridge(celerCCTP, opUSDC);
 
-        IDiamondCut.FacetCut[] memory facetCut = new IDiamondCut.FacetCut[](5);
+        IDiamondCut.FacetCut[] memory facetCut = new IDiamondCut.FacetCut[](4);
         facetCut[0].facetAddress = address(multicallFacet);
         facetCut[0].action = IDiamondCut.FacetCutAction.Add;
         facetCut[0].functionSelectors = new bytes4[](1);
@@ -57,15 +54,18 @@ contract HyperlaneTest is Script {
         facetCut[2].facetAddress = address(celer);
         facetCut[2].action = IDiamondCut.FacetCutAction.Add;
         facetCut[2].functionSelectors = new bytes4[](1);
-        facetCut[2].functionSelectors[0] = CelerCircleBridgeLogic
+        facetCut[2].functionSelectors[0] = CelerCircleBridge
             .sendCelerCircleMessage
             .selector;
 
         facetCut[3].facetAddress = address(hyperlaneMessanger);
         facetCut[3].action = IDiamondCut.FacetCutAction.Add;
-        facetCut[3].functionSelectors = new bytes4[](2);
+        facetCut[3].functionSelectors = new bytes4[](3);
         facetCut[3].functionSelectors[0] = HyperlaneMessanger.dispatch.selector;
         facetCut[3].functionSelectors[1] = HyperlaneMessanger.handle.selector;
+        facetCut[3].functionSelectors[2] = HyperlaneMessanger
+            .interchainSecurityModule
+            .selector;
 
         IDiamondCut(address(diamond)).diamondCut(
             facetCut,
