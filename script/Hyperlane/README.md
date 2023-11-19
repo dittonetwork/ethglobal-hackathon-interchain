@@ -2,7 +2,7 @@
 
 In our EthGlobal Hackathon entry, we present a cutting-edge application of Hyperlane's Messaging Protocol, combined with sophisticated Gelato automation and Celer bridging services. This project is designed to demonstrate seamless operational flow across diverse blockchain networks, harnessing the strength of Hyperlane's infrastructure. Our demonstration focuses on an innovative concept: "Fetch and Process". This involves retrieving assets from smart contract account vaults located on various networks and then employing automation services to effectively manage the incoming funds.
 
-[Transaction on Avalanche](https://explorer.hyperlane.xyz/message/0x0a615ef7aa48f42f7cf121147559d5636038d283c8f95e87e192460d4aff7517) to request USDC token from Optimism and WETH from PolygonZkEVM and run automation on [Avalanche](https://avascan.info/blockchain/c/tx/0x05de3d0ae6a5181c08e795a8c1fbc2097e8a28e3d2c4ea4efb5fc24aa8f85168) upon receive.
+[Transaction on Avalanche](https://explorer.hyperlane.xyz/message/0x0a615ef7aa48f42f7cf121147559d5636038d283c8f95e87e192460d4aff7517) to request [USDC token from Optimism](https://snowtrace.io/tx/0x50a7e01596244140347d8b76f38527cee10fbb092105d36c588404e43bf15a63) and [WETH from PolygonZkEVM](https://snowtrace.io/tx/0x3130b1eefb43098a16ce5a1b0abb43e99444ca90046daf7469c70e4ba48510cf) and run automation on [Avalanche](https://avascan.info/blockchain/c/tx/0x05de3d0ae6a5181c08e795a8c1fbc2097e8a28e3d2c4ea4efb5fc24aa8f85168) upon receive.
 
 <img width="1105" alt="image" src="https://github.com/dittonetwork/ethglobal-hackathon-interchain/assets/121140761/d6e7e0e5-776b-4bcf-892f-0cbac7dfe9d4">
 
